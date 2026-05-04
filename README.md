@@ -69,6 +69,11 @@ git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/Pape
 git submodule update --init --recursive
 ```
 
+> [!NOTE]
+> hugo v0.160.1+extended+withdeploy darwin/arm64 BuildDate=2026-04-08T14:02:42Z
+> has a conflict with PaperMod v8.0. We used working master branch.
+
+
 ### 4. Configuration
 The site was configured in `hugo.toml` with:
 - Site title and base URL
