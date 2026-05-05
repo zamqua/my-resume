@@ -1,7 +1,7 @@
 ---
 title: "Writing and Authenticity in the Age of GenAI"
 date: 2026-05-05
-draft: false
+draft: true
 tags: ["writing", "authenticity", "AI"]
 categories: ["Writing"]
 description: "How human perceive the text written by human vs. machine? Do we value the text if we know it is done by a machine? Why or Why not?"
