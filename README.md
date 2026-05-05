@@ -219,9 +219,7 @@ GCS Bucket (zamqua.com)
 ---
 
 ## Author
-
-**Mohammed Azam** — Principal Software Engineer
-Coppell, TX | [linkedin.com/in/mazam](https://linkedin.com/in/mazam) | [github.com/zamqua](https://github.com/zamqua)
+**Mohammed Azam**
 =======
 # my-resume
 My resume for "Cloud Resume Challenge"
