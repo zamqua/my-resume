@@ -1,4 +1,12 @@
-# Value of writing with advent of GenAI
+---
+title: "Writing and Authenticity in the Age of GenAI"
+date: 2026-05-05
+draft: false
+tags: ["writing", "authenticity", "AI"]
+categories: ["Writing"]
+description: "How human perceive the text written by human vs. machine? Do we value the text if we know it is done by a machine? Why or Why not?"
+showToc: true
+---
 
 Ken Tabor posted on LinkedIn:
 [If you think or feel a post was written (even in the slightest) with GenAI does its value drop dramatically to you now?](https://www.linkedin.com/posts/kentabor_if-you-think-or-feel-a-post-was-written-share-7454512378794348544-hjMZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAA5WC4BaE0FWx7nCoPAY-gw3K3H-rIJW98)
