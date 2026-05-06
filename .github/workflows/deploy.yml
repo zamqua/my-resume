@@ -1,0 +1,67 @@
+name: Deploy Hugo Site to GCS
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # allows manual trigger from GitHub UI
+
+permissions:
+  contents: read
+  id-token: write     # required for Workload Identity Federation
+
+jobs:
+  deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1 — Checkout code including PaperMod submodule
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true      # fetches PaperMod at pinned commit
+          fetch-depth: 0        # full history for Hugo lastmod dates
+
+      # Step 2 — Install Hugo Extended
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.160.1'    # pinned to your exact version
+          extended: true             # required for SCSS (Sassy CSS) support
+
+      # Step 3 — Build Hugo site
+      - name: Build site
+        run: |
+          rm -rf public/
+          hugo --minify
+        env:
+          HUGO_ENVIRONMENT: production
+
+      # Step 4 — Authenticate to GCP via Workload Identity
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+
+      # Step 5 — Deploy to GCS
+      - name: Deploy to GCS
+        uses: google-github-actions/setup-gcloud@v2
+        with:
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+
+      # Step 6 — Deploy to GCS
+      - name: Upload files to GCS
+        run: |
+          hugo deploy \
+            --target=gcs \
+            --maxDeletes=-1 \  # delete residual files from the bucket (not matching repos)
+            --invalidateCDN
+
+      # Step 6 — Done
+      - name: Deployment complete
+        run: |
+          echo "✅ Site deployed successfully!"
+          echo "🌐 https://zamqua.com"
+EOF
