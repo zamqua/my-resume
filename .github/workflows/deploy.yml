@@ -64,4 +64,3 @@ jobs:
         run: |
           echo "✅ Site deployed successfully!"
           echo "🌐 https://zamqua.com"
-EOF
