@@ -6,6 +6,9 @@ on:
       - main
   workflow_dispatch:  # allows manual trigger from GitHub UI
 
+  env:
+    FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true    # ← add this
+
 permissions:
   contents: read
   id-token: write     # required for Workload Identity Federation
@@ -25,10 +28,11 @@ jobs:
 
       # Step 2 — Install Hugo Extended
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: '0.160.1'    # pinned to your exact version
-          extended: true             # required for SCSS (Sassy CSS) support
+        run: |
+          wget -O hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_withdeploy_${HUGO_VERSION}_linux-amd64.tar.gz
+          tar -xzf hugo.tar.gz
+          sudo mv hugo /usr/local/bin/hugo
+          hugo version
 
       # Step 3 — Build Hugo site
       - name: Build site
