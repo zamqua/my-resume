@@ -1,13 +1,14 @@
 name: Deploy Hugo Site to GCS
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  HUGO_VERSION: 0.160.1
+
 on:
   push:
     branches:
       - main
   workflow_dispatch:  # allows manual trigger from GitHub UI
-
-  env:
-    FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true    # ← add this
 
 permissions:
   contents: read
@@ -60,7 +61,7 @@ jobs:
         run: |
           hugo deploy \
             --target=gcs \
-            --maxDeletes=-1 \  # delete residual files from the bucket (not matching repos)
+            --maxDeletes=-1 \
             --invalidateCDN
 
       # Step 6 — Done
