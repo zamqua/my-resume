@@ -1,5 +1,6 @@
 ---
 title: "Writing and Authenticity in the Age of GenAI"
+author: "Mohammed Azam"
 date: 2026-05-05
 draft: true
 tags: ["writing", "authenticity", "AI"]

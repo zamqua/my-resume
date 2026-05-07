@@ -1,5 +1,6 @@
 ---
 title: "DNS Configuration and SSL Certificate Activation for example.com"
+author: " "
 date: 2026-05-05
 draft: false
 tags: ["hugo", "gcp", "dns", "ssl", "devops", "cloud"]

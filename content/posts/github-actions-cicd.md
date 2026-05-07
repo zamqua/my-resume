@@ -1,5 +1,6 @@
 ---
 title: "GitHub Actions CI/CD Pipeline for Hugo Site Deployment"
+author: " "
 date: 2026-05-05
 draft: false
 tags: ["hugo", "gcp", "cicd", "github-actions", "devops", "automation"]

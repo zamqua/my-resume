@@ -1,5 +1,6 @@
 ---
 title: "Creating and Configuring a GCS Bucket for Static Website Hosting"
+author: " "
 date: 2026-05-04
 draft: false
 tags: ["hugo", "gcp", "gcs", "devops", "cloud", "storage"]

@@ -1,5 +1,6 @@
 ---
 title: "Setting Up Google Cloud Platform for Hugo Resume Deployment"
+author: " "
 date: 2026-05-04
 draft: false
 tags: ["hugo", "gcp", "devops", "cloud"]

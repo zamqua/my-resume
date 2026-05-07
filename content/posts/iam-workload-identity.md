@@ -1,5 +1,6 @@
 ---
 title: "IAM and Workload Identity Federation for Secure CI/CD"
+author: " "
 date: 2026-05-05
 draft: false
 tags: ["hugo", "gcp", "iam", "security", "cicd", "workload-identity"]
@@ -407,7 +408,7 @@ my-resume-123456
 ---
 
 ## Up Next
-
+1G
 With IAM and Workload Identity configured, we are ready to
 create the **GitHub Actions CI/CD pipeline** that automatically
 builds and deploys the Hugo site on every push to main.

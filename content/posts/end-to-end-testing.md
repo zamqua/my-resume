@@ -1,5 +1,6 @@
 ---
 title: "End to End Testing — Hugo Resume Site on GCP"
+author: " "
 date: 2026-05-05
 draft: false
 tags: ["hugo", "gcp", "testing", "cicd", "devops"]

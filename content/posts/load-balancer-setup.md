@@ -1,5 +1,6 @@
 ---
 title: "Setting Up Google Cloud Load Balancer with SSL and CDN"
+author: " "
 date: 2026-05-04
 draft: false
 tags: ["hugo", "gcp", "load-balancer", "ssl", "cdn", "devops"]
